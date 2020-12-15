@@ -1,0 +1,7 @@
+FROM pytorch/pytorch:latest
+USER root
+WORKDIR /workspace
+RUN pip install update pip && pip install \
+    jupyter \
+    matplotlib
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root", "--LabApp.token=''"]
