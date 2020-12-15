@@ -1,0 +1,11 @@
+version: '3'
+services:
+  pytorch:
+    build:
+      context: .
+      dockerfile: Dockerfile-pytorch
+    container_name: pytorch_container
+    ports:
+      - '8888:8888'
+    volumes:
+      - .:/workspace
